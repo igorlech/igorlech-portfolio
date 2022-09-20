@@ -1,0 +1,471 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of the reset */
+
+:root {
+  --main-color: #3dbaff;
+  --secondary-color: #3D59FF;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVBAR STYLING */
+
+.nav-logo {
+  width: 5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+  
+.nav > .nav-header {
+  display: inline;
+}
+  
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+  
+.nav > .nav-btn {
+  display: none;
+}
+  
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 1.2em;
+  margin-right: 2.5rem;
+}
+  
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  border: 3px solid var(--secondary-color);
+  border-radius: 30px;
+  color: #3D59FF;
+  margin-left: 1rem;
+  font-family: forma-djr-text, sans-serif;
+}
+  
+.nav > .nav-links > a:hover {
+  transition: 0.3s;
+  background-color: var(--secondary-color);
+  color: white;
+}
+  
+.nav > #nav-check {
+  display: none;
+}
+
+.nav-logo {
+  width: 3.5em;
+  margin-left: 1.5em;
+}
+  
+@media (max-width:700px) {
+  .nav > .nav-links > a {
+    color: white;
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+    padding: 7px;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    margin-right: 1em;
+    margin-top: 0.5em;
+  }
+
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 45px;
+    height: 13px;
+    border-top: 3px solid var(--secondary-color);
+  }
+
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: var(--main-color);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    top: 100px;
+    left: 0px;
+    font-size: 1.7em;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(13rem - 100px);
+    overflow-y: auto;
+  }
+
+  .home-header-title-cont, .header-title-1, .header-title-2 {
+    margin: 0;
+  }
+
+  .nav-logo {
+    width: 4rem;
+    margin-left: 0.5em;
+  }
+} 
+
+.active {
+  color: red;
+}
+
+/* HOME PAGE STYLING */
+
+.hl-landing {
+  margin-bottom: 5em;
+}
+
+.heading {
+  font-size: 5rem;
+  font-family: ff-nexus-typewriter, sans-serif;
+  text-transform: lowercase;
+}
+
+/* HOME PAGE STYLING */
+
+.hl-desktop {
+  display: none;
+}
+
+.igorphoto {
+  width: 18em;
+}
+
+.hl-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.landing-heading, .skills-heading, .projects-heading {
+  font-family: ff-nexus-typewriter, sans-serif;
+  word-spacing: -10px;
+  font-size: 4em;
+}
+
+.mobile-landing-texts {
+  font-family: forma-djr-text, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.landing-subheading, .landing-button {
+  font-family: forma-djr-text, sans-serif;
+}
+
+.landing-subheading {
+  margin-top: 1em;
+  font-size: 1.7em;
+}
+
+.landing-button {
+  padding: 1em 1em;
+  border: 3px solid var(--main-color);
+  border-radius: 50px;
+  font-size: 1.7em;
+  margin-top: 2em;
+  color: white;
+  background-color: var(--main-color);
+  box-shadow: 1px 1px 8px rgb(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* Skills section */
+
+.skills-heading {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.skillblock {
+  width: 20rem;
+  height: 30rem;
+  background-color: rgb(61, 186, 255, 0.5);
+  margin: auto;
+  margin-bottom: 2em;
+  border-radius: 50px;
+}
+
+.skills-wrapper {
+  margin-bottom: 2em;
+}
+
+/* Text after skills */
+
+.betweentext {
+  font-family: forma-djr-text, sans-serif;
+  font-size: 1.8em;
+}
+
+.between-text-cont {
+  margin: 0 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.between-section {
+  position: relative;
+  width: 100vw;
+}
+
+.behindshape-left {
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  background-color: var(--main-color);
+  opacity: 0.2;
+  border-radius: 73% 27% 36% 64% / 53% 40% 60% 47% ;
+  left: -10rem;
+  top: 20%;
+}
+
+/* Projects section styling */
+
+.projects-heading {
+  font-size: 3em;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.postimg {
+  width: 15em;
+  margin: 3em 1em;
+  border-radius: 20px;
+}
+
+.singleproject {
+  width: 20em;
+  height: 30em;
+  background-color: rgb(61, 186, 255, 0.5);
+  margin: auto;
+  margin-bottom: 2em;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sth {
+  height: 100vh;
+}
+
+/* Media queries for desktop */
+
+@media (min-width: 700px) {
+
+  .hl-mobile {
+    display: none;
+  }
+
+  .hl-desktop {
+    display: block;
+  }
+
+  .landing-heading, .landing-button, .landing-subheading, .igorphoto {
+    margin: 0;
+  }
+
+  .desktop-landing {
+    position: relative;
+    height: calc(100vh - 100px);
+    width: 100%;
+  }
+
+  .igorphoto {
+    width: 35%;
+    position: absolute;
+    left: 12%;
+    top: 10%
+    /* -webkit-filter: drop-shadow(2px 2px 8px rgb(34, 34, 34, 0.4));
+    filter: drop-shadow(2px 2px 8px rgb(34, 34, 34, 0.4)); */
+  }
+
+  .landing-heading {
+    font-size: 9vw;
+    position: absolute;
+    right: 12%;
+    top: 10%;
+  }
+
+  .landing-subheading {
+    font-size: 3vw;
+    position: absolute;
+    right: 12%;
+    top: 35%;
+
+  }
+
+  .landing-button {
+    font-size: 2.5vw;
+    border-radius: 50em;
+    position: absolute;
+    right: 25%;
+    top: 55%;
+  }
+
+  .landing-button:hover {
+    transition: 1s;
+    background-color: white;
+    color: var(--main-color);
+    box-shadow: 2px 1px 8px rgb(0, 0, 0, 0.2);
+  }
+  /* Skills section desktop */
+
+  .skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skills-section {
+    margin: 0 5em;
+  }
+
+  .skillblock {
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  .skills-heading {
+    text-align: left;
+    font-size: 7em;
+  }
+
+  /* Projects styling */
+
+  .singleproject {
+    width: 70em;
+    height: 25em;
+  }
+
+  .projects-section {
+    margin: 0 5em;
+  }
+
+  .projects-heading {
+    text-align: right;
+    font-size: 7em;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+  }
+}
+
+/* Additional queries */
+
+@media (min-width: 1200px) {
+  .igorphoto {
+    width: 35%;
+    left: 10%;
+    top: 0;
+  }
+
+  .landing-heading {
+    font-size: 9vw;
+    right: 12%;
+    top: 10%;
+  }
+
+  .landing-subheading {
+    font-size: 3vw;
+    right: 15%;
+    top: 40%;
+
+  }
+
+  .landing-button {
+    font-size: 2.5vw;
+    right: 25%;
+    top: 65%;
+  }
+}
