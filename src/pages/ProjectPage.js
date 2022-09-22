@@ -25,16 +25,22 @@ export default function ProjectPage() {
     }
 
     return (
-        <section className="sth">
-            <section className="post-row">
-                <article>
-                    <h3>{post.title && parse(post.title.rendered)}</h3>
-                    {post.content && parse(post.content.rendered)}
+        <div className="projpage">
+            <div className="project-row">
+                <article className="projpage-texts">
+                    <h3 className="projpage-title">{post.title && parse(post.title.rendered)}</h3>
+                    <p className="projpage-content">{post.content && parse(post.content.rendered)}</p>
+                    <p className="projpage-link-desktop">{post.acf?.website ? <a href={post.acf?.website}>See the product</a> : <p>No link available</p>}</p>
                 </article>
-                <figure>
-                    <img src={image} alt={post.title?.rendered} />
-                </figure>
-            </section>
-        </section>
+                <div className="projpage-other">
+                    <figure className="projpage-img-cont">
+                        <img src={image} alt={post.title?.rendered} className="projpage-img" />
+                    </figure>
+                    <div className="projpage-link-cont">
+                        <p className="projpage-link">{post.acf?.website ? <a href={post.acf?.website}>See the product</a> : <p>No link available</p>}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
