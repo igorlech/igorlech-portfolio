@@ -15,7 +15,8 @@ export default function HomeSlider({ options }) {
         getData();
     }, []);
     return (
-        <section>
+        <section className="slidersection">
+            <h2 className="testimonials-heading">testimonials</h2>
             <Slider {...options} className="slider">
                 {posts.slice(0).reverse().map(post => (
                     <SlideItem key={post.id} post={post} />

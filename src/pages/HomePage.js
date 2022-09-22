@@ -20,7 +20,9 @@ export default function HomePage() {
                     slidesToScroll: 1,
                     variableWidth: true,
                     adaptiveHeight: true,
-                    arrows: false
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 6000
                 }}
             />
             <HomeEndButtons />

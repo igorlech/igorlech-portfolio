@@ -225,7 +225,7 @@ a {
   height: calc(100vh - 100px);
 }
 
-.landing-heading, .skills-heading, .projects-heading {
+.landing-heading, .skills-heading, .projects-heading, .testimonials-heading {
   font-family: ff-nexus-typewriter, sans-serif;
   word-spacing: -10px;
   font-size: 4em;
@@ -274,6 +274,7 @@ a {
   margin: auto;
   margin-bottom: 2em;
   border-radius: 50px;
+  box-shadow: 1px 0px 8px rgb(189, 188, 188);
 }
 
 .skills-wrapper {
@@ -285,10 +286,62 @@ a {
   padding: 2em;
 }
 
+.single-skill {
+  width: 80%;
+}
+
 .skills-img-cont {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillname {
+  font-family: forma-djr-text, sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 0.2em;
+}
+
+.hardskill-chart {
+  height: 1em;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+#hard2 {
+  width: 90%;
+}
+
+#hard3 {
+  width: 50%;
+}
+
+#hard4 {
+  width: 20%;
+}
+
+#hard5 {
+  width: 10%;
+}
+
+.creativeskills-list {
+  list-style-type: disc;
+  margin-left: 3em;
+  margin-right: 0.5em;
+}
+
+.cs-listitem {
+  margin-bottom: 0.5em;
+}
+
+.second {
+  margin: 0;
+  text-align: left;
+  margin-left: 3em;
+  margin-right: 2em;
 }
 
 /* Text after skills */
@@ -345,6 +398,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 1px 0px 8px rgb(161, 161, 161);
 }
 
 .project-title, .project-overview {
@@ -416,12 +470,47 @@ a {
 
 /* Slider with testimonials */
 
-.slider-img {
-  height: 18em;
+.testimonials-heading {
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 0.5em 0;
 }
+
+.slidee {
+  height: 15em;
+  margin: 0;
+  font-family: forma-djr-text, sans-serif;
+}
+
+.slidecontent {
+  width: 100vw;
+}
+
+.slider-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider-img {
+  width: 5em;
+  border-radius: 50%;
+}
+
+.slidersection {
+  margin-bottom: 5em;
+}
+
+/* ABOUT PAGE STYLING */
 
 .about-content {
   margin: 1em;
+  font-family: forma-djr-text, sans-serif;
+  font-size: 1.5em;
+}
+
+.igorabout {
+  width: 20em;
 }
 
 /* Media queries for desktop */
@@ -600,6 +689,22 @@ a {
 
   .projpage-link-desktop {
     display: block;
+  }
+
+  /* Slider */
+  .slidee {
+    height: 15em;
+    margin: 0 20em;
+  }
+  
+  .slidecontent {
+    width: 80vw;
+  }
+
+  .testimonials-heading {
+    font-size: 6em;
+    text-align: left;
+    margin-left: 1em;
   }
 }
 
