@@ -3,6 +3,7 @@ import SkillsSection from "../components/SkillsSection";
 import Projects from "../components/Projects";
 import HomeSlider from "../components/HomeSlider";
 import HomeEndButtons from "../components/HomeEndButtons";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
     return (
@@ -22,10 +23,11 @@ export default function HomePage() {
                     adaptiveHeight: true,
                     arrows: false,
                     autoplay: true,
-                    autoplaySpeed: 6000
+                    autoplaySpeed: 8000
                 }}
             />
             <HomeEndButtons />
+            <Footer />
         </section>
     )
 };

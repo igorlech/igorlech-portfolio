@@ -10,9 +10,9 @@ export default function SlideItem({ post }) {
         <article className="slidee">
             <div className="slider-heading">
                 <img src={image} alt={parse(post.title.rendered)} className="slider-img" />
-                <h1>{parse(post.title.rendered)}</h1>
+                <h1 className="slider-name">{parse(post.title.rendered)}</h1>
             </div>
-            <div className="slidecontent">{parse(post.content.rendered)}</div>
+            <blockquote className="slidecontent">{parse(post.content.rendered)}</blockquote>
         </article>
     );
 }

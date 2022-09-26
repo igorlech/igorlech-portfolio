@@ -225,7 +225,7 @@ a {
   height: calc(100vh - 100px);
 }
 
-.landing-heading, .skills-heading, .projects-heading, .testimonials-heading {
+.landing-heading, .skills-heading, .projects-heading, .testimonials-heading, .about-heading, .contact-heading {
   font-family: ff-nexus-typewriter, sans-serif;
   word-spacing: -10px;
   font-size: 4em;
@@ -264,7 +264,7 @@ a {
 
 .skills-heading {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .skillblock {
@@ -477,28 +477,64 @@ a {
 }
 
 .slidee {
-  height: 15em;
-  margin: 0;
+  height: 23em;
+  margin: 0 2em;
   font-family: forma-djr-text, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slidecontent {
-  width: 100vw;
+  width: 90vw;
+  font-size: 1.2em;
 }
 
 .slider-heading {
+  font-size: 1.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1em;
+}
+
+.slider-name {
+  margin-left: 0.5em;
 }
 
 .slider-img {
-  width: 5em;
+  width: 3em;
   border-radius: 50%;
 }
 
 .slidersection {
   margin-bottom: 5em;
+}
+
+/* End buttons */
+
+.endbuttons-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.endbutton {
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+  padding: 0.7em;
+  border-radius: 40px;
+  font-family: forma-djr-text, sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 8px rgba(173, 173, 173, 0.4);
+  cursor: pointer;
+}
+
+#letstalk {
+  color: #ffffff;
+  background-color: var(--main-color);
 }
 
 /* ABOUT PAGE STYLING */
@@ -510,7 +546,95 @@ a {
 }
 
 .igorabout {
-  width: 20em;
+  width: 17em;
+}
+
+.about-photo-cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.about-heading {
+  text-align: center;
+}
+
+.about-heading-cont {
+  margin: 3em 0;
+}
+
+.about-technologies-cont {
+  display: flex;
+  justify-content: space-around;
+  margin: 3em 0;
+}
+
+.technology-logo {
+  height: 3em;
+}
+
+.igordrums {
+  display: none;
+}
+
+/* Footer styling */
+
+.footer {
+  background-color: var(--secondary-color);
+  height: 12em;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerlogo {
+  width: 5em;
+  margin-bottom: 2em;
+}
+
+.footername {
+  font-family: ff-nexus-typewriter, sans-serif;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+/* CONTACT PAGE styling */
+
+.contact-heading {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.contactpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singlecontact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border: 5px solid var(--main-color);
+  width: 15em;
+  height: 15em;
+  margin-bottom: 2em;
+  border-radius: 25px;
+}
+
+.contact-title {
+  font-family: forma-djr-text, sans-serif;
+  font-size: 1.5em;
+  color: var(--main-color);
+  margin: 1em 0;
+}
+
+.contact-img {
+  width: 10em;
 }
 
 /* Media queries for desktop */
@@ -664,9 +788,13 @@ a {
     margin: 0 1em;
   }
 
+  .projpage-content p {
+    margin: 1em 0;
+  }
+
   .projpage-title {
     font-size: 5em;
-    margin: 0;
+    margin: 0 0.2em;
   }
 
   .projpage-other {
@@ -693,19 +821,146 @@ a {
 
   /* Slider */
   .slidee {
-    height: 15em;
+    height: 20em;
     margin: 0 20em;
   }
   
   .slidecontent {
-    width: 80vw;
+    width: 55vw;
+    font-size: 1.7em;
   }
 
   .testimonials-heading {
     font-size: 6em;
     text-align: left;
     margin-left: 1em;
+    margin-top: 2em;
   }
+
+  /* About desktop */
+
+  .aboutpage {
+    background-image: url("./img/aboutback2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .igorabout {
+    width: 25em;
+  }
+
+  .about-content-cont {
+    display: flex;
+  }
+
+  .about-wrapper {
+    width: 60%;
+  }
+
+  .about-photo-cont {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-content {
+    line-height: 1.4em;
+  }
+
+  .about-heading {
+    text-align: right;
+    font-size: 10em;
+    margin-right: 0.5em;
+  }
+
+  .igordrums {
+    display: block;
+    width: 22em;
+    border-radius: 56% 44% 69% 31% / 49% 60% 40% 51% ;
+  }
+
+  .about-technologies-cont {
+    margin: 5em 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .technology-logo {
+    display: block;
+    height: 5em;
+  }
+
+  /* Endbuttons */
+
+  .endbuttons-cont {
+    margin-top: 8em;
+  }
+
+  .endbutton {
+    font-size: 2em;
+  }
+
+  #letstalk:hover {
+    box-shadow: 1px 1px 10px rgba(173, 173, 173);
+    transition: 1s;
+  }
+
+  #resume:hover {
+    box-shadow: 1px 1px 10px rgba(173, 173, 173);
+    transition: 1s;
+  }
+
+  /* Footer desktop */
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5em;
+    height: 8em;
+  }
+
+  .footerlogo {
+    margin-bottom: 0;
+  }
+
+  /* Contact page styling desktop */
+
+  .contact-heading {
+    font-size: 6em;
+  }
+
+  .contact-img {
+    width: 6em;
+  }
+
+  .singlecontact {
+    flex-direction: row;
+    height: 8em;
+    width: 30em;
+    padding: 0;
+  }
+
+  .singlecontact:hover {
+    box-shadow: 0px 0px 5px rgba(146, 146, 146, 0.9);
+    transition: 0.5s;
+  }
+
+  .contact-first, .contact-second {
+    width: 50%;
+    display: flex;
+  }
+
+  .contact-first {
+    justify-content: center;
+  }
+
+  .contact-title {
+    margin: 0;
+  }
+  
 }
 
 /* Additional queries */
