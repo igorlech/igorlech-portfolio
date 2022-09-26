@@ -38,11 +38,11 @@ export default function AboutPage({ post }) {
                 </div>
             </div>
             <div className="about-technologies-cont">
-                <img src={reactlogo} className="technology-logo" id="react" alt="React Logo" />
-                <img src={jslogo} className="technology-logo" id="js" alt="React Logo" />
-                <img src={htmllogo} className="technology-logo" id="html" alt="React Logo" />
-                <img src={csslogo} className="technology-logo" id="css" alt="React Logo" />
-                <img src={ghlogo} className="technology-logo" id="gh" alt="React Logo" />
+                <img src={reactlogo} className="technology-logo floating" id="react" alt="React Logo" />
+                <img src={jslogo} className="technology-logo floating2" id="js" alt="React Logo" />
+                <img src={htmllogo} className="technology-logo floating3" id="html" alt="React Logo" />
+                <img src={csslogo} className="technology-logo floating4" id="css" alt="React Logo" />
+                <img src={ghlogo} className="technology-logo floating5" id="gh" alt="React Logo" />
             </div>
             <Footer />
         </section>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem";
+import { Fade } from 'react-awesome-reveal';
 
 export default function Projects() {
     const [posts, setPosts] = useState([]);
@@ -15,7 +16,9 @@ export default function Projects() {
 
     return (
         <div className="projects-section">
-            <h2 className="projects-heading">projects<br></br>I worked on</h2>
+            <Fade triggerOnce="true" direction="up">
+                <h2 className="projects-heading">projects<br></br>I worked on</h2>
+            </Fade>
             <div className="projects-wrapper">
             {posts.slice(0).reverse().map(post => (
                         <ProjectItem key={post.id} post={post} />

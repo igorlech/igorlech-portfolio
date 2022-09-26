@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SlideItem from "../components/SlideItem";
 import { useEffect, useState } from "react";
+import { Fade } from 'react-awesome-reveal';
 
 export default function HomeSlider({ options }) {
     const [posts, setPosts] = useState([]);
@@ -16,7 +17,9 @@ export default function HomeSlider({ options }) {
     }, []);
     return (
         <section className="slidersection">
-            <h2 className="testimonials-heading">testimonials</h2>
+            <Fade triggerOnce="true" direction="up">
+                <h2 className="testimonials-heading">testimonials</h2>
+            </Fade>
             <Slider {...options} className="slider">
                 {posts.slice(0).reverse().map(post => (
                     <SlideItem key={post.id} post={post} />

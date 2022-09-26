@@ -1,12 +1,15 @@
 import codeicon from '../img/code-icon.png';
 import designicon from '../img/design-icon.png';
 import skillsicon from '../img/skills-icon.png';
+import { Fade } from 'react-awesome-reveal';
 
 
 export default function SkillsSection() {
     return (
         <div className="skills-section">
-            <h2 className="skills-heading" id="skills-heading">my main skills</h2>
+            <Fade triggerOnce="true" direction='up'>
+                <h2 className="skills-heading" id="skills-heading">my main skills</h2>
+            </Fade>
             <div className="skills-wrapper">
                 <div className="hard-skills-coding skillblock">
                     <div className="skills-img-cont">
